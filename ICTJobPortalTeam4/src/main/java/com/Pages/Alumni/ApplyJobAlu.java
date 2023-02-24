@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ApplyJobAlu {
+	
 
 	@FindBy(xpath = "//button[text()='Apply ']")
 	private WebElement Apply;
@@ -108,8 +109,9 @@ public class ApplyJobAlu {
 		Submit.click();
 		Thread.sleep(3000);
 
-		System.out.println("sample66");
-		System.out.println("sample63333336");
+		System.out.println("2.43");
+	
+		
 	}
 
 }
