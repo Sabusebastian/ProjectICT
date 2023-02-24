@@ -110,9 +110,5 @@ public class SignupAlu {
 		Thread.sleep(2000);
 		Submit.click();
 		Thread.sleep(2000);
-		
-		System.out.println("Sample Test");
-		System.out.println("New Test Push");
-
 	}
 }
