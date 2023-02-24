@@ -103,7 +103,7 @@ public class LoginAlu {
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", HomeIcon);
 			Thread.sleep(3000);
-			//HomeIcon.click();
+			
 			
 			
 		}
