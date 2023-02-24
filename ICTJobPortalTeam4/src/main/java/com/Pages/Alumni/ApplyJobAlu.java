@@ -109,6 +109,7 @@ public class ApplyJobAlu {
 		Submit.click();
 		Thread.sleep(3000);
 System.out.println("sample66");
+System.out.println("sample63333336");
 	}
 
 }
