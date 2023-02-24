@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ApplyJobAlu {
 
-	//@FindBy(xpath = "//h5[text()='tester']//parent::div//following-sibling::div//child::div//child::button")
+	// @FindBy(xpath =
+	// "//h5[text()='tester']//parent::div//following-sibling::div//child::div//child::button")
 	@FindBy(xpath = "//button[text()='Apply ']")
 	private WebElement Apply;
 
@@ -55,8 +56,8 @@ public class ApplyJobAlu {
 	public void clickApply() throws InterruptedException {
 		Thread.sleep(3000);
 		Apply.click();
-		//JavascriptExecutor executor=(JavascriptExecutor)driver;
-		//executor.executeScript("arguments[0].click();", Apply);
+		// JavascriptExecutor executor=(JavascriptExecutor)driver;
+		// executor.executeScript("arguments[0].click();", Apply);
 		Thread.sleep(3000);
 
 	}
@@ -96,19 +97,18 @@ public class ApplyJobAlu {
 	public void EnterIfThenPlacedCompanyName(Object companyname) {
 		IfThenEnterPlacedCompanyName.sendKeys(companyname.toString());
 	}
-    
+
 	public void ShareYourResume(String resume) throws InterruptedException {
 		Thread.sleep(2000);
 		PleaseShareYourResume.sendKeys(resume);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("window.scrollBy(0,350)", "");
+		js.executeScript("window.scrollBy(0,350)", "");
 	}
 
 	public void ClickSubmit() throws InterruptedException {
 		Thread.sleep(3000);
 		Submit.click();
 		Thread.sleep(3000);
-System.out.println("sample5");
 	}
 
 }
