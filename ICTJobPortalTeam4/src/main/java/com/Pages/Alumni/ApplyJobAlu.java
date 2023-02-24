@@ -109,10 +109,7 @@ public class ApplyJobAlu {
 		Thread.sleep(3000);
 		Submit.click();
 		Thread.sleep(3000);
-<<<<<<< HEAD
-=======
-System.out.println("sample66");
->>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+
 	}
 
 }
