@@ -109,7 +109,7 @@ public class ApplyJobAlu {
 		Submit.click();
 		Thread.sleep(3000);
 
-		System.out.println("2.43");
+		System.out.println("2.46");
 	
 		
 	}
