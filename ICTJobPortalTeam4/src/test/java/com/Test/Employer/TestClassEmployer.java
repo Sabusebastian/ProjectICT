@@ -79,7 +79,7 @@ public class TestClassEmployer extends BaseClass {
 
 	}
 	
-	//@Ignore
+	
 	@Test(priority = 3, description = "Create New Job Post with Valid Details")
 	public void CreateNewPostVerification() throws InterruptedException, IOException {
 
@@ -185,7 +185,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	//@Ignore
+	
 	@Test(priority=5, description = "View resume from approved posts")
 	public void ViewResumeVerification() throws InterruptedException {
 	    ObjApprovedPosts = new ApprovedPostEmp(driver);
@@ -217,7 +217,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 
 	
-	//@Ignore
+	
 	@Test(priority=6, description = "Logout function verification")
 	public void LogOutVerification() throws InterruptedException{
 		
