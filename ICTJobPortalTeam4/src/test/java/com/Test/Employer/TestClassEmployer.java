@@ -227,6 +227,8 @@ public class TestClassEmployer extends BaseClass {
 		Object Header = ObjLogout.LoginPageHeader();
 		Assert.assertEquals(Header, "Employer Login");
 		
+		System.out.println("Test Finished");
+		
 	}
 
 }
