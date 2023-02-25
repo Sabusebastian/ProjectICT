@@ -2,6 +2,7 @@ package com.Test.Faculty;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Base.BaseClass;
@@ -29,7 +30,13 @@ Object enterPassword=ExcelUtility.GetCellData(1,2, System.getProperty("user.dir"
 objSignup.enterName(enterName);
 objSignup.enterEmail(enterEmail);
 objSignup.enterPassword(enterPassword);
-objSignup.clicksubmit();}
+objSignup.clicksubmit();
+String actualUrl=driver.getCurrentUrl();
+
+String expectedUrl="https://delightful-earrings-fish.cyclic.app/faculty";
+Assert.assertEquals(actualUrl, expectedUrl,"expected Url and actual Url are not same");
+System.out.println("Test Finished");
+}
 
 @Test(priority=2)
 public void Loginverification() throws IOException, InterruptedException {
