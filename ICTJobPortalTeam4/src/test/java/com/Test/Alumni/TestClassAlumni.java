@@ -155,14 +155,15 @@ public class TestClassAlumni extends BaseClass {
 	}
 
 	@Ignore
-	@Test(priority = 3)
+	@Test(priority = 3, description= "logout function verification")
 	public void LogoutVerification() throws InterruptedException {
 		objlogout = new LogoutAlu(driver);
 		Object currenturl = driver.getCurrentUrl();
 		objlogout.Clicklogout();
 		Object newurl = driver.getCurrentUrl();
 		Assert.assertNotEquals(newurl, currenturl, "The two urls are same-Test failed");
-
+		
+		
 	}
 
 }
