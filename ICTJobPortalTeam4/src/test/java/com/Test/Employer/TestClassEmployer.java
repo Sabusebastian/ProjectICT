@@ -27,8 +27,8 @@ public class TestClassEmployer extends BaseClass {
 	ApprovedPostEmp ObjApprovedPosts;
 	LogoutEmp ObjLogout;
 
-	//@Ignore
-	@Test(priority = 1, groups="Login/Signup", description= "New user signup with valid details")
+	
+	@Test(priority = 1, description= "New user signup with valid details")
 	public void SignupVerification() throws InterruptedException, IOException {
 
 		ObjSignup = new SignupEmp(driver);
