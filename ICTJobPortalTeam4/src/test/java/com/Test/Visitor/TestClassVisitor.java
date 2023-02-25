@@ -44,7 +44,7 @@ public class TestClassVisitor extends BaseClass{
 		objManageVis.clickSearch();
 		Thread.sleep(2000);
 		//objManageVis.ResultCount();
-		
+		System.out.println("Total jobs displayed for the entered key word:" );
 		objManageVis.clickBack();
 		Thread.sleep(3000);
 		
