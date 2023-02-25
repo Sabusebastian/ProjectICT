@@ -6,7 +6,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 
@@ -15,7 +17,7 @@ public class BaseClass {
 	public WebDriver driver;
 	public static Properties prop=null;
 	
-	@BeforeTest
+	@BeforeClass
 	public void onLaunch() throws IOException
 	{
 	
@@ -28,7 +30,7 @@ public class BaseClass {
 	driver.manage().window().maximize();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void closeWindow()
 	{
 		driver.quit();

@@ -45,6 +45,7 @@ public class TestClassVisitor extends BaseClass {
 		Thread.sleep(2000);
 		// objManageVis.ResultCount();
 		objManageVis.clickBack();
+		
 		Thread.sleep(3000);
 
 	}

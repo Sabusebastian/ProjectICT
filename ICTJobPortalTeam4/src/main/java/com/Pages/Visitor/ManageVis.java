@@ -28,7 +28,8 @@ public class ManageVis extends BaseClass{
 
 	@FindBy(xpath="//h5[@class='card-title']")
 	private List<WebElement> result;
-
+	
+	
 	
 	
 	public ManageVis(WebDriver driver)
@@ -71,4 +72,5 @@ public class ManageVis extends BaseClass{
 		backbutton.click();
 		Thread.sleep(2000);
 	}
+	
 }
