@@ -16,7 +16,7 @@ public class TestClassFac extends BaseClass {
 	LoginpageFac objLog;
 	SignoutFac objSignout;
 
-	@Test(priority = 1)
+	@Test(priority = 1,description="faculty signup with valid datas")
 	public void Signupverification() throws InterruptedException, IOException {
 
 		objSignup = new SignupFac(driver);
@@ -33,6 +33,7 @@ public class TestClassFac extends BaseClass {
 		objSignup.enterEmail(enterEmail);
 		objSignup.enterPassword(enterPassword);
 		objSignup.clicksubmit();
+		
 		String actualUrl = driver.getCurrentUrl();
 
 		String expectedUrl = "https://delightful-earrings-fish.cyclic.app/faculty";
