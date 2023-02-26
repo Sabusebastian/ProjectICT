@@ -52,11 +52,31 @@ public class TestClassFac extends BaseClass {
 		objLog.enterPassword(enterPassword);
 
 		objLog.clicksubmit();
+		
+		String actualUrl=driver.getCurrentUrl();
+		String expectedUrl="https://delightful-earrings-fish.cyclic.app/fachome/facview";
+		Assert.assertEquals(actualUrl,expectedUrl, "actualaUrl and expectedUrl are not same");
+		System.out.println("Test passed");
+		
+		
+		
 	}
 
 	@Test(priority = 3)
 	public void Logoutverification() {
 		objSignout = new SignoutFac(driver);
 		objSignout.clicksignout();
+		
+		String actualUrl=driver.getCurrentUrl();
+		String expectedUrl="https://delightful-earrings-fish.cyclic.app/";
+		Assert.assertEquals(actualUrl, expectedUrl, "actualUral and expectedUrl are not same");
+		driver.quit();
+		
+		
+		
+		
+		
+		
+		
 	}
 }
