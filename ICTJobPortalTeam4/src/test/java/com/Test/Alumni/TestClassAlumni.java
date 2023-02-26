@@ -69,7 +69,7 @@ public class TestClassAlumni extends BaseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, description="Login with valid email and password")
 	public void Loginverification() throws InterruptedException, IOException {
 
 		ObjLoginAlu = new LoginAlu(driver);
@@ -91,7 +91,7 @@ public class TestClassAlumni extends BaseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void SearchJobVerification() throws IOException, InterruptedException {
 
 		objsearch = new SearchJobsAlu(driver);
@@ -111,7 +111,7 @@ public class TestClassAlumni extends BaseClass {
 		// objsearch.Clickback();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4, description= "Apply job with valid details")
 	public void ApplyJobVerification() throws InterruptedException, IOException {
 
 		ObjApplyJobAlu = new ApplyJobAlu(driver);
@@ -155,7 +155,7 @@ public class TestClassAlumni extends BaseClass {
 	}
 
 	@Ignore
-	@Test(priority = 3, description= "logout function verification")
+	@Test(priority = 5, description= "logout function verification")
 	public void LogoutVerification() throws InterruptedException {
 		objlogout = new LogoutAlu(driver);
 		Object currenturl = driver.getCurrentUrl();
