@@ -41,7 +41,7 @@ public class TestClassFac extends BaseClass {
 		System.out.println("SignupVerfication - Test Finished ");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,description="faculty signup with valid datas")
 	public void Loginverification() throws IOException, InterruptedException {
 		objLog = new LoginpageFac(driver);
 
