@@ -33,6 +33,7 @@ public class TestClassFac extends BaseClass {
 		objSignup.enterEmail(enterEmail);
 		objSignup.enterPassword(enterPassword);
 		objSignup.clicksubmit();
+		
 		String actualUrl = driver.getCurrentUrl();
 
 		String expectedUrl = "https://delightful-earrings-fish.cyclic.app/faculty";
