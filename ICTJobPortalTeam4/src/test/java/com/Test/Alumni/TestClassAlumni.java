@@ -25,7 +25,7 @@ public class TestClassAlumni extends BaseClass {
 	ApplyJobAlu ObjApplyJobAlu;
 	LoginAlu ObjLoginAlu;
 
-	@Test(priority = 1)
+	@Test(priority = 1, description="New User signup with valid details")
 	public void Signupverification() throws InterruptedException, IOException {
 
 		ObjSignupAlu = new SignupAlu(driver);
