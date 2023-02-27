@@ -167,5 +167,40 @@ public class EditJobEmp {
 
 	//	Update.click();
 	}
+	public boolean isUpdateButtonEnabled() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 350)");
+		
+		boolean isenabled = Update.isEnabled();
+		return isenabled;
+	}
+	
+	public void ClearData() throws InterruptedException {
+		JobName.clear();
+		Thread.sleep(200);
+		CompanyName.clear();
+		Thread.sleep(200);
+		Location.clear();
+		Thread.sleep(200);
+		Salary.clear();
+		Thread.sleep(200);
+		JobType.clear();
+		Thread.sleep(200);
+		Qualifications.clear();
+		Thread.sleep(200);
+		JobDescription.clear();
+		Thread.sleep(200);
+		Experience.clear();
+		Thread.sleep(200);
+		Benefits.clear();
+		Thread.sleep(200);
+		Schedule.clear();
+		Thread.sleep(200);
+		Language.clear();
+		Thread.sleep(200);
+		Contact.clear();
+		Thread.sleep(200);
+	}
 
 }

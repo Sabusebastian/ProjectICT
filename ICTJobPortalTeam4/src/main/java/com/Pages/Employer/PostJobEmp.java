@@ -50,6 +50,9 @@ public class PostJobEmp {
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement Submit;
 	
+	@FindBy(xpath="//a[text()='Dashboard']")
+	private WebElement Dashboard;
+	
 	WebDriver driver;
 
 	public PostJobEmp(WebDriver driver) {
@@ -144,5 +147,12 @@ public class PostJobEmp {
 		boolean isEnabled= Submit.isEnabled();
 		return isEnabled;
 	}
+	public void ClickDashboard() throws InterruptedException {
+		Thread.sleep(1000);
+		Dashboard.click();
+		Thread.sleep(2000);
+
+	}
+	
 
 }

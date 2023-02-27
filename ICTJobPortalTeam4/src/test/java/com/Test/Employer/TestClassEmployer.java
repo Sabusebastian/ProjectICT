@@ -28,7 +28,7 @@ public class TestClassEmployer extends BaseClass {
 	ApprovedPostEmp ObjApprovedPosts;
 	LogoutEmp ObjLogout;
 
-	@Ignore
+	
 	@Test(priority = 1, description= "New user signup with valid details")
 	public void SignupVerification() throws InterruptedException, IOException {
 
@@ -80,8 +80,9 @@ public class TestClassEmployer extends BaseClass {
 
 	}
 	
-	@Test(priority = 3, description = "Create New Job Post with blank fields")
-	public void CreateNewPostWithBlankFields() throws InterruptedException, IOException {
+	
+	@Test(priority = 3, description = "Create New Job Post with All fields as Blank")
+	public void CreateNewPostWithoutData() throws InterruptedException, IOException {
 
 		ObjPostJob = new PostJobEmp(driver);
 		ObjAlert = new AlertMsg();
@@ -90,11 +91,59 @@ public class TestClassEmployer extends BaseClass {
 		boolean Actual= ObjPostJob.IsSubmitButtonEnabled();
 		boolean expected = false; 
 		
-		Assert.assertEquals(Actual, expected);
+		Assert.assertEquals(Actual, expected, "submit button is enabled-Test failed");
 	}
 	
-	@Ignore
-	@Test(priority = 3, description = "Create New Job Post with Valid Details")
+	
+	@Test(priority = 4, description = "Create New Job Post without entering data on a required field")
+	public void CreateNewPostWithSomeBlankField() throws InterruptedException, IOException {
+
+		ObjPostJob = new PostJobEmp(driver);
+		ObjAlert = new AlertMsg();
+
+		
+		Object companyname = ExcelUtility.GetCellData(1, 2,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object location = ExcelUtility.GetCellData(1, 3,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object jobtype = ExcelUtility.GetCellData(1, 5,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object qualifications = ExcelUtility.GetCellData(1, 6,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object jobdescription = ExcelUtility.GetCellData(1, 7,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object experience = ExcelUtility.GetCellData(1, 8,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object benefits = ExcelUtility.GetCellData(1, 9,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object schedule = ExcelUtility.GetCellData(1, 10,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		Object language = ExcelUtility.GetCellData(1, 11,
+				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
+		
+		ObjPostJob.ClickDashboard();
+		ObjPostJob.CreateNewPost();
+		ObjPostJob.EnterCompanyName(companyname);
+		ObjPostJob.EnterLocation(location);
+		ObjPostJob.EnterJobType(jobtype);
+		ObjPostJob.EnterQualifications(qualifications);
+		ObjPostJob.EnterJobDescription(jobdescription);
+		ObjPostJob.EnterExperience(experience);
+		ObjPostJob.EnterBenefits(benefits);
+		ObjPostJob.EnterSchedule(schedule);
+		ObjPostJob.EnterLanguage(language);
+		ObjPostJob.IsSubmitButtonEnabled();
+		
+		ObjPostJob.CreateNewPost();
+		boolean Actual= ObjPostJob.IsSubmitButtonEnabled();
+		boolean expected = false; 
+		
+		Assert.assertEquals(Actual, expected, "submit button is enabled-Test failed");
+	}
+	
+	
+	
+	@Test(priority = 5, description = "Create New Job Post with Valid Details")
 	public void CreateNewPostVerification() throws InterruptedException, IOException {
 
 		ObjPostJob = new PostJobEmp(driver);
@@ -124,7 +173,8 @@ public class TestClassEmployer extends BaseClass {
 				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
 		Object contact = ExcelUtility.GetCellData(1, 12,
 				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
-
+		
+		ObjPostJob.ClickDashboard();
 		ObjPostJob.CreateNewPost();
 		ObjPostJob.EnterJobName(jobname);
 		ObjPostJob.EnterCompanyName(companyname);
@@ -144,8 +194,8 @@ public class TestClassEmployer extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Job Posted");
 	}
 	
-	@Ignore
-	@Test(priority = 4, description = "Edit Job Post with new Details")
+	
+	@Test(priority = 6, description = "Edit Job Post with new Details")
 	public void EditPostVerification() throws InterruptedException, IOException {
 
 		ObjEditJob = new EditJobEmp(driver);
@@ -176,6 +226,7 @@ public class TestClassEmployer extends BaseClass {
 		Object contact = ExcelUtility.GetCellData(2, 12,
 				System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 1);
 
+		ObjPostJob.ClickDashboard();
 		ObjEditJob.ClickViewJob();
 		ObjEditJob.ClickEditJob();
 		ObjEditJob.EditJobName(jobname);
@@ -199,9 +250,10 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	@Ignore
-	@Test(priority=5, description = "View resume from approved posts")
+	
+	@Test(priority=7, description = "View resume from approved posts")
 	public void ViewResumeVerification() throws InterruptedException {
+		
 	    ObjApprovedPosts = new ApprovedPostEmp(driver);
 	    
 	    String firstWindowHandle = driver.getWindowHandle();
@@ -229,10 +281,9 @@ public class TestClassEmployer extends BaseClass {
 	    System.out.println(SecondTabURL);
 	    Assert.assertNotEquals(firstTabURL, SecondTabURL, "The URLs are same");    
 	}
-
 	
-	@Ignore
-	@Test(priority=6, description = "Logout function verification")
+	
+	@Test(priority=8, description = "Logout function verification")
 	public void LogOutVerification() throws InterruptedException{
 		
 		ObjLogout= new LogoutEmp(driver);
