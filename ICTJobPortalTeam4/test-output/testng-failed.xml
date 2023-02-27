@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Test.Alumni.TestClassAlumni">
+      <class name="com.Test.Employer.TestClassEmployer">
         <methods>
-          <include name="LogoutVerification"/>
+          <include name="LoginVerfication"/>
+          <include name="ViewResumeVerification"/>
+          <include name="LogOutVerification"/>
+          <include name="CreateNewPostWithoutData"/>
+          <include name="EditPostVerification"/>
+          <include name="CreateNewPostVerification"/>
+          <include name="CreateNewPostWithSomeBlankField"/>
           <include name="onLaunch"/>
-          <include name="closeWindow"/>
         </methods>
-      </class> <!-- com.Test.Alumni.TestClassAlumni -->
+      </class> <!-- com.Test.Employer.TestClassEmployer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
