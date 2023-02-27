@@ -132,5 +132,17 @@ public class PostJobEmp {
 
 		Submit.click();
 	}
+	public boolean IsSubmitButtonEnabled() throws InterruptedException {
+		
+		Thread.sleep(1000);
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 350)");
+		
+		Thread.sleep(2000);
+
+		boolean isEnabled= Submit.isEnabled();
+		return isEnabled;
+	}
 
 }

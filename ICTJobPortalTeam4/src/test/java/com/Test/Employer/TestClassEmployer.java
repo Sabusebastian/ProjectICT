@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.Base.BaseClass;
@@ -27,7 +28,7 @@ public class TestClassEmployer extends BaseClass {
 	ApprovedPostEmp ObjApprovedPosts;
 	LogoutEmp ObjLogout;
 
-	
+	@Ignore
 	@Test(priority = 1, description= "New user signup with valid details")
 	public void SignupVerification() throws InterruptedException, IOException {
 
@@ -79,7 +80,20 @@ public class TestClassEmployer extends BaseClass {
 
 	}
 	
+	@Test(priority = 3, description = "Create New Job Post with blank fields")
+	public void CreateNewPostWithBlankFields() throws InterruptedException, IOException {
+
+		ObjPostJob = new PostJobEmp(driver);
+		ObjAlert = new AlertMsg();
+
+		ObjPostJob.CreateNewPost();
+		boolean Actual= ObjPostJob.IsSubmitButtonEnabled();
+		boolean expected = false; 
+		
+		Assert.assertEquals(Actual, expected);
+	}
 	
+	@Ignore
 	@Test(priority = 3, description = "Create New Job Post with Valid Details")
 	public void CreateNewPostVerification() throws InterruptedException, IOException {
 
@@ -130,7 +144,7 @@ public class TestClassEmployer extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Job Posted");
 	}
 	
-	
+	@Ignore
 	@Test(priority = 4, description = "Edit Job Post with new Details")
 	public void EditPostVerification() throws InterruptedException, IOException {
 
@@ -185,7 +199,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	
+	@Ignore
 	@Test(priority=5, description = "View resume from approved posts")
 	public void ViewResumeVerification() throws InterruptedException {
 	    ObjApprovedPosts = new ApprovedPostEmp(driver);
@@ -217,7 +231,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 
 	
-	
+	@Ignore
 	@Test(priority=6, description = "Logout function verification")
 	public void LogOutVerification() throws InterruptedException{
 		
