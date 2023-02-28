@@ -25,6 +25,12 @@ public class SignupFac {
 
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement Sub;
+	@FindBy(xpath="//div[text()='Please, enter valid email address.']")
+	private WebElement invalid;
+	@FindBy(xpath="//div[text()='password is required.']")
+	private WebElement invalidpass;
+	@FindBy(xpath="//button[text()='Login..?']")
+	private WebElement log;
 
 	public SignupFac(WebDriver driver) {
 		this.driver = driver;
