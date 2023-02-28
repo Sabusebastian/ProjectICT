@@ -91,7 +91,7 @@ public class TestClassAlumni extends BaseClass {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,description="searchjobs with valid jobs")
 	public void SearchJobVerification() throws IOException, InterruptedException {
 
 		objsearch = new SearchJobsAlu(driver);
