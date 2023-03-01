@@ -17,6 +17,11 @@ public class LoginpageFac {
 	
 	@FindBy(xpath="//button[@type='submit']")
 	private WebElement sub;
+	@FindBy(xpath="//div[text()='Please, enter valid email address.']")
+	private WebElement invalidmail;
+	
+	@FindBy(xpath = "//a[text()='Log In As Faculty']")
+	private WebElement Facicon;
 	
 	public LoginpageFac(WebDriver driver)
 	{this.driver=driver;
@@ -41,7 +46,15 @@ public class LoginpageFac {
 	}
 	
 	
-	
+	public boolean Invalidid() throws InterruptedException
+	{boolean Invalidmail=invalidmail.isDisplayed();
+	return Invalidid();
+	}
+
+	public void clicklogasfac() throws InterruptedException
+	{Facicon.click();
+	Thread.sleep(1000);
+	}
 	
 	
 	
