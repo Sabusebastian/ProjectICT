@@ -74,5 +74,16 @@ public class SignupFac {
 	
 	boolean ErrorMsg=invalid.isDisplayed();
 	return ErrorMsg;}
+	public boolean Invalidpass() throws InterruptedException
+	{Thread.sleep(1000);
+	boolean Invaildpass=invalidpass.isDisplayed();
+			return Invaildpass;
+	}
+	
+	public void Disabledbutton() throws InterruptedException
+	{log.click();
+	Thread.sleep(1000);
+	}
+	
 
 }
