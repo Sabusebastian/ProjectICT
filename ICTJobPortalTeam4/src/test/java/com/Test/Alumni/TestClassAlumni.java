@@ -68,8 +68,8 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Data saved successfully");
 
 	}
-
 	@Test(priority = 2, description="Login with valid email and password")
+
 	public void Loginverification() throws InterruptedException, IOException {
 
 		ObjLoginAlu = new LoginAlu(driver);

@@ -68,5 +68,11 @@ public class SignupFac {
 		Sub.click();
 		Thread.sleep(3000);
 	}
+	public boolean Errormsg() throws InterruptedException
+	{
+		Thread.sleep(1000);
+	
+	boolean ErrorMsg=invalid.isDisplayed();
+	return ErrorMsg;}
 
 }
