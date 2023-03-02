@@ -13,7 +13,7 @@ public class TestClassVisitor extends BaseClass {
 
 	ManageVis objManageVis;
 
-	@Test(priority = 1)
+	@Test(priority = 1 ,description="search a valid job name")
 	public void SearchJobinVisitorPage() throws IOException, InterruptedException {
 		objManageVis = new ManageVis(driver);
 
@@ -35,7 +35,7 @@ public class TestClassVisitor extends BaseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, description="search a invalid job name")
 	public void JobNameSearch() throws IOException, InterruptedException {
 		objManageVis = new ManageVis(driver);
 		Object JbName = ExcelUtility.GetCellData(0, 1,
