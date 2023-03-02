@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Functional Testing(failed)">
     <classes>
-      <class name="com.Test.Faculty.TestClassFac">
-        <methods>
-          <include name="Logoutverification"/>
-          <include name="onLaunch"/>
-          <include name="closeWindow"/>
-        </methods>
-      </class> <!-- com.Test.Faculty.TestClassFac -->
       <class name="com.Test.Alumni.TestClassAlumni">
         <methods>
           <include name="LogoutVerification"/>
@@ -17,17 +10,6 @@
           <include name="closeWindow"/>
         </methods>
       </class> <!-- com.Test.Alumni.TestClassAlumni -->
-      <class name="com.Test.Employer.TestClassEmployer">
-        <methods>
-          <include name="LoginVerfication"/>
-          <include name="ViewResumeVerification"/>
-          <include name="LogOutVerification"/>
-          <include name="EditPostVerification"/>
-          <include name="CreateNewPostVerification"/>
-          <include name="onLaunch"/>
-          <include name="closeWindow"/>
-        </methods>
-      </class> <!-- com.Test.Employer.TestClassEmployer -->
     </classes>
   </test> <!-- Functional Testing(failed) -->
 </suite> <!-- Failed suite [Suite] -->
