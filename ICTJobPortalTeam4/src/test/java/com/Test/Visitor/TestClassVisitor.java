@@ -59,8 +59,8 @@ public class TestClassVisitor extends BaseClass {
 				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
 		objManageVis.EnterJobname(JbName);
 		objManageVis.clickSearch();
-		boolean actual=false;
-		boolean expected=objManageVis.checkStatusofSearchButton();
+		boolean expected=false;
+		boolean actual=objManageVis.checkStatusofSearchButton();
 		Assert.assertEquals(actual, expected);
 		System.out.println("CLICK BUTTON IS NOT ENABLED WITH EMPTY FIELD AS JOB NAME");
 		objManageVis.clickBack();
