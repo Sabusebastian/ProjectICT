@@ -43,10 +43,39 @@ public class TestClassVisitor extends BaseClass {
 		objManageVis.EnterJobname(JbName);
 		objManageVis.clickSearch();
 		Thread.sleep(2000);
-		// objManageVis.ResultCount();
+		 objManageVis.ResultCount();
+		 int count1 = objManageVis.ResultCount();
+			System.out.println("Total jobs displayed for the entered key word:" + count1);
 		objManageVis.clickBack();
 		
 		Thread.sleep(3000);
 
 	}
+	@Test(priority = 3, description="checking the status of search button when passing a null value to the job name field")
+	public void statusSearchButton() throws IOException, InterruptedException
+	{
+		objManageVis = new ManageVis(driver);
+		Object JbName = ExcelUtility.GetCellData(20, 50,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		objManageVis.EnterJobname(JbName);
+		objManageVis.clickSearch();
+		boolean actual=false;
+		boolean expected=objManageVis.checkStatusofSearchButton();
+		Assert.assertEquals(actual, expected);
+		System.out.println("CLICK BUTTON IS NOT ENABLED WITH EMPTY FIELD AS JOB NAME");
+		objManageVis.clickBack();
+		Thread.sleep(3000);
+		
+		
+
+	}
+	
+	
+	
+	
+	
 }
+
+
+
+

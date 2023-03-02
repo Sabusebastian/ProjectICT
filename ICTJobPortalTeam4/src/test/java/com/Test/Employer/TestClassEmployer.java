@@ -1,4 +1,4 @@
-package com.Test.Employer;
+ package com.Test.Employer;
 
 import java.io.IOException;
 import java.util.Random;
@@ -27,8 +27,8 @@ public class TestClassEmployer extends BaseClass {
 	ApprovedPostEmp ObjApprovedPosts;
 	LogoutEmp ObjLogout;
 
-	//@Ignore
-	@Test(priority = 1, groups="Login/Signup", description= "New user signup with valid details")
+	
+	@Test(priority = 1, description= "New user signup with valid details")
 	public void SignupVerification() throws InterruptedException, IOException {
 
 		ObjSignup = new SignupEmp(driver);
@@ -79,7 +79,7 @@ public class TestClassEmployer extends BaseClass {
 
 	}
 	
-	//@Ignore
+	
 	@Test(priority = 3, description = "Create New Job Post with Valid Details")
 	public void CreateNewPostVerification() throws InterruptedException, IOException {
 
@@ -185,7 +185,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	//@Ignore
+	
 	@Test(priority=5, description = "View resume from approved posts")
 	public void ViewResumeVerification() throws InterruptedException {
 	    ObjApprovedPosts = new ApprovedPostEmp(driver);
@@ -217,7 +217,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 
 	
-	//@Ignore
+	
 	@Test(priority=6, description = "Logout function verification")
 	public void LogOutVerification() throws InterruptedException{
 		
@@ -226,6 +226,8 @@ public class TestClassEmployer extends BaseClass {
 		ObjLogout.ClickLogout();
 		Object Header = ObjLogout.LoginPageHeader();
 		Assert.assertEquals(Header, "Employer Login");
+		
+		System.out.println("Test Finished");
 		
 	}
 

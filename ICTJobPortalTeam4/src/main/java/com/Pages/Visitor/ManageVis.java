@@ -72,5 +72,12 @@ public class ManageVis extends BaseClass{
 		backbutton.click();
 		Thread.sleep(2000);
 	}
+	public boolean checkStatusofSearchButton()
+	{
+		
+	
+	boolean status=searchbutton.isEnabled();
+	return status;
+	}
 	
 }

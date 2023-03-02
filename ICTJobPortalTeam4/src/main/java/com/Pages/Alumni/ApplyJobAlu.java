@@ -108,7 +108,7 @@ public class ApplyJobAlu {
 		Thread.sleep(3000);
 		Submit.click();
 		Thread.sleep(3000);
-	
+	System.out.println("ayisha");
 		
 	}
 
