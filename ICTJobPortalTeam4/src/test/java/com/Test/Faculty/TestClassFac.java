@@ -94,7 +94,7 @@ public class TestClassFac extends BaseClass {
 		Object enterPassword=ExcelUtility.GetCellData(1,2, System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
 
 
-		objSignup.enterName(enterName);
+		objSignup.enterName(enterName); 
 		objSignup.enterEmail(enterEmail);
 		objSignup.enterPassword(enterPassword);
 

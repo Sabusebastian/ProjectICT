@@ -68,7 +68,94 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Data saved successfully");
 
 	}
-	@Test(priority = 2, description="Login with valid email and password")
+	@Test(priority = 2, description="New User signup with Invalid emailid")
+	public void Signupverification1() throws InterruptedException, IOException {
+
+		ObjSignupAlu = new SignupAlu(driver);
+
+		ObjAlert = new AlertMsg();
+
+		Random random = new Random();
+		int number = random.nextInt(10000);
+
+		Object alumniname = ExcelUtility.GetCellData(3, 3,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object email = number + ExcelUtility.GetCellData(3, 12,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object mobilenumber = ExcelUtility.GetCellData(3, 12,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object course = ExcelUtility.GetCellData(3, 13,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object qualification = ExcelUtility.GetCellData(3, 6,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object batch = ExcelUtility.GetCellData(3, 17,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object placement = ExcelUtility.GetCellData(3, 15,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object password = ExcelUtility.GetCellData(3, 2,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+
+		ObjSignupAlu.clickLogin();
+		ObjSignupAlu.EnterAlumniName(alumniname);
+		ObjSignupAlu.EnterEmailAdress(email);
+		ObjSignupAlu.EnterMobileNumber(mobilenumber);
+		ObjSignupAlu.EnterCourse(course);
+		ObjSignupAlu.EnterQualification(qualification);
+		ObjSignupAlu.EnterBatch(batch);
+		ObjSignupAlu.EnterPlacementStatus(placement);
+		ObjSignupAlu.EnterPassWord(password);
+		boolean Expected=true;
+		boolean actual=ObjSignupAlu.Errormsg();
+		Assert.assertEquals(actual, Expected);
+		//ObjSignupAlu.clicksubmit();
+		System.out.println("passed signup with  invalidemail");
+}
+	
+	@Test(priority = 3, description="New User signup with Invalid mobilenumber")
+	public void Signupverification2() throws InterruptedException, IOException {
+
+		ObjSignupAlu = new SignupAlu(driver);
+
+		ObjAlert = new AlertMsg();
+
+		Random random = new Random();
+		int number = random.nextInt(10000);
+
+		Object alumniname = ExcelUtility.GetCellData(3, 3,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object email = number + ExcelUtility.GetCellData(3, 12,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object mobilenumber = ExcelUtility.GetCellData(3, 3,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object course = ExcelUtility.GetCellData(3, 13,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object qualification = ExcelUtility.GetCellData(3, 6,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object batch = ExcelUtility.GetCellData(3, 17,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object placement = ExcelUtility.GetCellData(3, 15,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object password = ExcelUtility.GetCellData(3, 2,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+
+		ObjSignupAlu.clickLogin();
+		ObjSignupAlu.EnterAlumniName(alumniname);
+		ObjSignupAlu.EnterEmailAdress(email);
+		ObjSignupAlu.EnterMobileNumber(mobilenumber);
+		ObjSignupAlu.EnterCourse(course);
+		ObjSignupAlu.EnterQualification(qualification);
+		ObjSignupAlu.EnterBatch(batch);
+		ObjSignupAlu.EnterPlacementStatus(placement);
+		ObjSignupAlu.EnterPassWord(password);
+		boolean Expected=true;
+		boolean actual=ObjSignupAlu.Errormsg();
+		Assert.assertEquals(actual, Expected);
+		//ObjSignupAlu.clicksubmit();
+		System.out.println("passed signup with  invalidnumber");
+}
+	
+
+	@Test(priority = 4, description="Login with valid email and password")
 
 	public void Loginverification() throws InterruptedException, IOException {
 
@@ -90,8 +177,31 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Login success");
 
 	}
+	@Test(priority = 5, description="Login with invalid email and password")
 
-	@Test(priority = 3)
+	public void Loginverification1() throws InterruptedException, IOException {
+
+		ObjLoginAlu = new LoginAlu(driver);
+		ObjLoginAlu.movetoHome();
+		ObjLoginAlu.clickLogin();
+		ObjAlert = new AlertMsg();
+
+		Object emailaddress = ExcelUtility.GetCellData(3, 2,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object password = ExcelUtility.GetCellData(3, 2,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+
+		ObjLoginAlu.EnterEmail(emailaddress);
+		ObjLoginAlu.EnterPassword(password);
+		boolean Expected=true;
+		boolean actual=ObjSignupAlu.Errormsg();
+		Assert.assertEquals(actual, Expected);
+		//ObjSignupAlu.clicksubmit();
+		System.out.println("passed signup with  invalidemail");
+}
+	
+
+	@Test(priority = 6)
 	public void SearchJobVerification() throws IOException, InterruptedException {
 
 		objsearch = new SearchJobsAlu(driver);
@@ -111,7 +221,7 @@ public class TestClassAlumni extends BaseClass {
 		// objsearch.Clickback();
 	}
 
-	@Test(priority = 4, description= "Apply job with valid details")
+	@Test(priority = 7, description= "Apply job with valid details")
 	public void ApplyJobVerification() throws InterruptedException, IOException {
 
 		ObjApplyJobAlu = new ApplyJobAlu(driver);
@@ -153,9 +263,52 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(Alertmsg, "Upload Success");
 
 	}
+	@Test(priority = 8, description= "Apply job with invalid details")
+	public void ApplyJobVerification1() throws InterruptedException, IOException {
 
-	@Ignore
-	@Test(priority = 5, description= "logout function verification")
+		ObjApplyJobAlu = new ApplyJobAlu(driver);
+		ObjApplyJobAlu.clickApply();
+
+		Object yourname = ExcelUtility.GetCellData(3, 3,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object phonenumber = ExcelUtility.GetCellData(3, 12,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object emailaddress = ExcelUtility.GetCellData(3, 1,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object qualification = ExcelUtility.GetCellData(3, 6,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object experience = ExcelUtility.GetCellData(3, 8,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object coursename = ExcelUtility.GetCellData(3, 13,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object branchname = ExcelUtility.GetCellData(3, 14,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object placementstatus = ExcelUtility.GetCellData(3, 15,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object companyname = ExcelUtility.GetCellData(3, 16,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		String resume = System.getProperty("user.dir") + "\\src\\main\\resources\\SRS.pdf";
+
+		ObjApplyJobAlu.EnterYourName(yourname);
+		ObjApplyJobAlu.EnterYourPhoneNumber(phonenumber);
+		ObjApplyJobAlu.EnterYourEmailAddress(emailaddress);
+		ObjApplyJobAlu.EnterYourQualification(qualification);
+		ObjApplyJobAlu.EnteryourExperience(experience);
+		ObjApplyJobAlu.EnterYourCourseName(coursename);
+		ObjApplyJobAlu.EnterYourBranchName(branchname);
+		ObjApplyJobAlu.EnterIsyouGotPlacedPreviously(placementstatus);
+		ObjApplyJobAlu.EnterIfThenPlacedCompanyName(companyname);
+		ObjApplyJobAlu.ShareYourResume(resume);
+		ObjApplyJobAlu.Disabledbutton();
+
+		boolean Expected=true;
+		boolean actual=ObjApplyJobAlu.Invalid();
+		Assert.assertEquals(actual, Expected);
+		System.out.println("passed invalid branch");
+
+	}
+	
+	@Test(priority = 9, description= "logout function verification")
 	public void LogoutVerification() throws InterruptedException {
 		objlogout = new LogoutAlu(driver);
 		Object currenturl = driver.getCurrentUrl();
@@ -163,7 +316,6 @@ public class TestClassAlumni extends BaseClass {
 		Object newurl = driver.getCurrentUrl();
 		Assert.assertNotEquals(newurl, currenturl, "The two urls are same-Test failed");
 		
-		
 	}
-
+		
 }

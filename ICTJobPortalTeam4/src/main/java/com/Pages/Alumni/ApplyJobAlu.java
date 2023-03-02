@@ -44,6 +44,9 @@ public class ApplyJobAlu {
 
 	@FindBy(xpath = "//button[@class='btn rounded my-2 btn-warning']")
 	private WebElement Submit;
+	
+	@FindBy(xpath="//div[text()='Please, enter branch name']")
+	private WebElement invalid;
 
 	WebDriver driver = null;
 
@@ -108,8 +111,24 @@ public class ApplyJobAlu {
 		Thread.sleep(3000);
 		Submit.click();
 		Thread.sleep(3000);
-	System.out.println("ayisha");
+	}
+		public boolean Errormsg() throws InterruptedException
+		{
+			Thread.sleep(1000);
+		
+		boolean ErrorMsg=invalid.isDisplayed();
+		return ErrorMsg;}
+		public boolean Invalid() throws InterruptedException
+		{Thread.sleep(1000);
+		boolean Invaildpass=invalid.isDisplayed();
+				return Invaildpass;
+		}
+		
+		public void Disabledbutton() throws InterruptedException
+		{Submit.click();
+		Thread.sleep(1000);
+		}
+		
 		
 	}
 
-}
