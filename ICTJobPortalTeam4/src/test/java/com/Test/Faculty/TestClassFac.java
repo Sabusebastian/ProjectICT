@@ -103,4 +103,42 @@ public class TestClassFac extends BaseClass {
 		Assert.assertEquals(actual, Expected);
 		//objSignup.clicksubmit();
 		System.out.println("passed signup with  invalidemail");
-}}
+}
+	@Test(priority=2,description="Signupverification with nullpassword")
+	public void Signupverification3() throws InterruptedException, IOException {
+		
+
+	objSignup=new SignupFac(driver);
+	objSignup.clickonloginasFaculty();
+	objSignup.clickonSignup();
+	
+	Object enterName=ExcelUtility.GetCellData(1,3 ,System.getProperty("user.dir")+ "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+	Object enterEmail=ExcelUtility.GetCellData(1, 1, System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+	Object enterPassword=ExcelUtility.GetCellData(8,8, System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+
+
+	objSignup.enterName(enterName);
+	objSignup.enterEmail(enterEmail);
+	objSignup.enterPassword(enterPassword);
+	objSignup.Disabledbutton();
+
+	boolean Expected=true;
+	boolean actual=objSignup.Invalidpass();
+	Assert.assertEquals(actual, Expected);
+	System.out.println("passed null password");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

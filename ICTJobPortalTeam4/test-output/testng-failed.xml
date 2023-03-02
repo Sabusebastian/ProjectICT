@@ -3,6 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.Test.Alumni.TestClassAlumni">
+        <methods>
+          <include name="LogoutVerification"/>
+          <include name="onLaunch"/>
+          <include name="closeWindow"/>
+        </methods>
+      </class> <!-- com.Test.Alumni.TestClassAlumni -->
+=======
       <class name="com.Test.Employer.TestClassEmployer">
         <methods>
           <include name="SignupVerification"/>
@@ -10,6 +19,7 @@
           <include name="closeWindow"/>
         </methods>
       </class> <!-- com.Test.Employer.TestClassEmployer -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
