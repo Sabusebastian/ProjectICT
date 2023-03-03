@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Random;
 
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import com.Base.BaseClass;
 import com.Pages.Alumni.ApplyJobAlu;
@@ -177,12 +176,8 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Login success");
 
 	}
-	
 	@Test(priority = 5, description="Login with invalid email and password")
-	
-	
-	
-	@Test(priority = 3,description="searchjobs with valid jobs")
+
 	public void Loginverification1() throws InterruptedException, IOException {
 
 		ObjLoginAlu = new LoginAlu(driver);
@@ -200,8 +195,7 @@ public class TestClassAlumni extends BaseClass {
 		boolean Expected=true;
 		boolean actual=ObjSignupAlu.Errormsg();
 		Assert.assertEquals(actual, Expected);
-		//ObjSignupAlu.clicksubmit();
-		System.out.println("passed signup with  invalidemail");
+		System.out.println("passed signup with  invalidemailid");
 }
 	
 
