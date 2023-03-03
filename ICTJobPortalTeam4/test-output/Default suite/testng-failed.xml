@@ -5,6 +5,7 @@
     <classes>
       <class name="com.Test.Employer.TestClassEmployer">
         <methods>
+<<<<<<< HEAD
           <include name="LoginVerfication"/>
           <include name="ViewResumeVerification"/>
           <include name="SignupVerification"/>
@@ -13,6 +14,9 @@
           <include name="EditPostVerification"/>
           <include name="CreateNewPostVerification"/>
           <include name="CreateNewPostWithSomeBlankField"/>
+=======
+          <include name="SignupVerification"/>
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <include name="onLaunch"/>
         </methods>
       </class> <!-- com.Test.Employer.TestClassEmployer -->

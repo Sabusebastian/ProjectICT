@@ -41,6 +41,17 @@ public class SignupAlu {
 
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement Submit;
+	
+	
+	@FindBy(xpath="//div[text()='Please, enter valid email address.']")
+	private WebElement invalidemail;
+	
+	@FindBy(xpath="//div[text()='mobilenumber is required.']")
+	private WebElement invalidnumber;
+	
+	@FindBy(xpath="//button[text()='Login..?']")
+	private WebElement login;
+
 
 	WebDriver driver = null;
 
@@ -111,4 +122,23 @@ public class SignupAlu {
 		Submit.click();
 		Thread.sleep(2000);
 	}
+	
+	public boolean Errormsg() throws InterruptedException
+	{
+		Thread.sleep(1000);
+	
+	boolean ErrorMsg=invalidemail.isDisplayed();
+	return ErrorMsg;}
+	public boolean Invalidpass() throws InterruptedException
+	{Thread.sleep(1000);
+	boolean Invailnumber=invalidnumber.isDisplayed();
+			return Invailnumber ;
+	}
+	
+	public void Disabledbutton() throws InterruptedException
+	{login.click();
+	Thread.sleep(1000);
+	}
+	
+	
 }

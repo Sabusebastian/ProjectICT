@@ -26,6 +26,12 @@
 		@FindBy(xpath="//button[@class='btn btn-primary']")
 		private WebElement Submit;
 		
+		@FindBy(xpath="//div[text()='Please, enter valid email address.']")
+		private WebElement invalidmail;
+		
+		@FindBy(xpath = "//a[text()='Log In As Alumni']")
+		private WebElement Aluicon;
+		
 		WebDriver driver;
 		
 		public LoginAlu(WebDriver driver) {
@@ -57,4 +63,19 @@
 		   Submit.click();
 		   Thread.sleep(3000);
 	   }
+	   
+	   public boolean Invalidid() throws InterruptedException
+		{boolean Invalidid=invalidmail.isDisplayed();
+		return Invalidid();
+		}
+
+		public void clicklogasAlu() throws InterruptedException
+		{HomeIcon.click();
+		Thread.sleep(1000);
+		}
+		
+	   
+	   
+	   
+	   
 	}

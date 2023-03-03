@@ -1,16 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="8" passed="0" failed="8" skipped="0">
+=======
+<<<<<<< HEAD
+<testng-results ignored="0" total="16" passed="15" failed="1" skipped="0">
+=======
+<testng-results ignored="5" total="6" passed="0" failed="0" skipped="1">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2023-02-28T14:11:02 IST" name="Default suite" finished-at="2023-02-28T14:11:54 IST" duration-ms="51959">
+=======
+<<<<<<< HEAD
+  <suite started-at="2023-02-25T14:17:26 GST" name="Suite" finished-at="2023-02-25T14:22:14 GST" duration-ms="288421">
+=======
+  <suite started-at="2023-02-28T20:14:15 IST" name="Default suite" finished-at="2023-02-28T20:14:20 IST" duration-ms="5289">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2023-02-28T14:11:02 IST" name="Default test" finished-at="2023-02-28T14:11:54 IST" duration-ms="51959">
+=======
+<<<<<<< HEAD
+    <test started-at="2023-02-25T14:17:26 GST" name="Functional Testing" finished-at="2023-02-25T14:22:14 GST" duration-ms="288421">
+=======
+    <test started-at="2023-02-28T20:14:15 IST" name="Default test" finished-at="2023-02-28T20:14:20 IST" duration-ms="5289">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
       <class name="com.Test.Employer.TestClassEmployer">
+<<<<<<< HEAD
         <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:02 IST" name="onLaunch" finished-at="2023-02-28T14:11:17 IST" duration-ms="14969" status="PASS">
+=======
+<<<<<<< HEAD
+        <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:19:39 GST" name="onLaunch" finished-at="2023-02-25T14:19:44 GST" duration-ms="5183" status="PASS">
+=======
+        <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Employer.TestClassEmployer@359f7cdf]" started-at="2023-02-28T20:14:15 IST" name="onLaunch" finished-at="2023-02-28T20:14:20 IST" duration-ms="5202" status="FAIL">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Error communicating with the remote browser. It may have died.
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d8c6d99439f6e3e6b02694e532bc8d0, get {url=https://delightful-earrings-fish.cyclic.app/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55521}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55521/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d8c6d99439f6e3e6b02694e532bc8d0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d8c6d99439f6e3e6b02694e532bc8d0, get {url=https://delightful-earrings-fish.cyclic.app/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55521}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55521/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d8c6d99439f6e3e6b02694e532bc8d0
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+at com.Base.BaseClass.onLaunch(BaseClass.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+... 28 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- onLaunch -->
+<<<<<<< HEAD
         <test-method signature="SignupVerification()[pri:1, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:17 IST" name="SignupVerification" description="New user signup with valid details" finished-at="2023-02-28T14:11:32 IST" duration-ms="14508" status="FAIL">
           <exception class="org.openqa.selenium.NoAlertPresentException">
             <message>
@@ -80,9 +191,95 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+=======
+<<<<<<< HEAD
+        <test-method signature="SignupVerification()[pri:1, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:19:44 GST" name="SignupVerification" description="New user signup with valid details" finished-at="2023-02-25T14:19:57 GST" duration-ms="12657" status="PASS">
+=======
+        <test-method signature="SignupVerification()[pri:1, instance:com.Test.Employer.TestClassEmployer@359f7cdf]" started-at="2023-02-28T20:14:20 IST" name="SignupVerification" description="New user signup with valid details" finished-at="2023-02-28T20:14:20 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Error communicating with the remote browser. It may have died.
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d8c6d99439f6e3e6b02694e532bc8d0, get {url=https://delightful-earrings-fish.cyclic.app/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55521}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55521/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d8c6d99439f6e3e6b02694e532bc8d0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d8c6d99439f6e3e6b02694e532bc8d0, get {url=https://delightful-earrings-fish.cyclic.app/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55521}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55521/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d8c6d99439f6e3e6b02694e532bc8d0
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+at com.Base.BaseClass.onLaunch(BaseClass.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+... 28 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignupVerification -->
+<<<<<<< HEAD
         <test-method signature="LoginVerfication()[pri:2, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:32 IST" name="LoginVerfication" description="Login with valid username and password" finished-at="2023-02-28T14:11:39 IST" duration-ms="7198" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
@@ -159,9 +356,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+=======
+<<<<<<< HEAD
+        <test-method signature="LoginVerfication()[pri:2, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:19:57 GST" name="LoginVerfication" description="Login with valid username and password" finished-at="2023-02-25T14:20:18 GST" duration-ms="21578" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginVerfication -->
+<<<<<<< HEAD
         <test-method signature="CreateNewPostWithoutData()[pri:3, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:39 IST" name="CreateNewPostWithoutData" description="Create New Job Post with All fields as Blank" finished-at="2023-02-28T14:11:44 IST" duration-ms="5044" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -393,9 +595,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method signature="CreateNewPostVerification()[pri:3, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:20:18 GST" name="CreateNewPostVerification" description="Create New Job Post with Valid Details" finished-at="2023-02-25T14:20:42 GST" duration-ms="23443" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateNewPostVerification -->
+<<<<<<< HEAD
         <test-method signature="EditPostVerification()[pri:6, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:48 IST" name="EditPostVerification" description="Edit Job Post with new Details" finished-at="2023-02-28T14:11:49 IST" duration-ms="1587" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -471,9 +677,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method signature="EditPostVerification()[pri:4, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:20:42 GST" name="EditPostVerification" description="Edit Job Post with new Details" finished-at="2023-02-25T14:21:07 GST" duration-ms="25539" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EditPostVerification -->
+<<<<<<< HEAD
         <test-method signature="ViewResumeVerification()[pri:7, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:49 IST" name="ViewResumeVerification" description="View resume from approved posts" finished-at="2023-02-28T14:11:52 IST" duration-ms="3041" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -549,9 +759,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method signature="ViewResumeVerification()[pri:5, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:21:07 GST" name="ViewResumeVerification" description="View resume from approved posts" finished-at="2023-02-25T14:21:21 GST" duration-ms="13456" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewResumeVerification -->
+<<<<<<< HEAD
         <test-method signature="LogOutVerification()[pri:8, instance:com.Test.Employer.TestClassEmployer@2e005c4b]" started-at="2023-02-28T14:11:52 IST" name="LogOutVerification" description="Logout function verification" finished-at="2023-02-28T14:11:54 IST" duration-ms="2046" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -627,10 +841,173 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method signature="LogOutVerification()[pri:6, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:21:21 GST" name="LogOutVerification" description="Logout function verification" finished-at="2023-02-25T14:21:29 GST" duration-ms="8351" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogOutVerification -->
+<<<<<<< HEAD
+=======
+        <test-method is-config="true" signature="closeWindow()[pri:0, instance:com.Test.Employer.TestClassEmployer@4f18837a]" started-at="2023-02-25T14:21:29 GST" name="closeWindow" finished-at="2023-02-25T14:21:30 GST" duration-ms="514" status="PASS">
+=======
+        <test-method is-config="true" signature="closeWindow()[pri:0, instance:com.Test.Employer.TestClassEmployer@359f7cdf]" started-at="2023-02-28T20:14:20 IST" name="closeWindow" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1677595460837" status="SKIP">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
       </class> <!-- com.Test.Employer.TestClassEmployer -->
+<<<<<<< HEAD
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+<<<<<<< HEAD
+      <class name="com.Test.Alumni.TestClassAlumni">
+        <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:18:12 GST" name="onLaunch" finished-at="2023-02-25T14:18:17 GST" duration-ms="4775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onLaunch -->
+        <test-method signature="Signupverification()[pri:1, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:18:17 GST" name="Signupverification" finished-at="2023-02-25T14:18:46 GST" duration-ms="28317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Signupverification -->
+        <test-method signature="Loginverification()[pri:2, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:18:46 GST" name="Loginverification" finished-at="2023-02-25T14:19:04 GST" duration-ms="18112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loginverification -->
+        <test-method signature="SearchJobVerification()[pri:2, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:19:04 GST" name="SearchJobVerification" finished-at="2023-02-25T14:19:16 GST" duration-ms="12554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchJobVerification -->
+        <test-method signature="ApplyJobVerification()[pri:3, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:19:16 GST" name="ApplyJobVerification" finished-at="2023-02-25T14:19:35 GST" duration-ms="19073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ApplyJobVerification -->
+        <test-method signature="LogoutVerification()[pri:3, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:19:35 GST" name="LogoutVerification" finished-at="2023-02-25T14:19:38 GST" duration-ms="3149" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Logout Alumni']"}
+  (Session info: chrome=110.0.5481.105)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0c2e5f71a41f24462a7fb8eee45b075b, findElement {using=xpath, value=//a[text()='Logout Alumni']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50089/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c2e5f71a41f24462a7fb8eee45b075b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Logout Alumni']"}
+  (Session info: chrome=110.0.5481.105)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0c2e5f71a41f24462a7fb8eee45b075b, findElement {using=xpath, value=//a[text()='Logout Alumni']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50089/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c2e5f71a41f24462a7fb8eee45b075b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at com.Pages.Alumni.LogoutAlu.Clicklogout(LogoutAlu.java:22)
+at com.Test.Alumni.TestClassAlumni.LogoutVerification(TestClassAlumni.java:156)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutVerification -->
+        <test-method is-config="true" signature="closeWindow()[pri:0, instance:com.Test.Alumni.TestClassAlumni@6356695f]" started-at="2023-02-25T14:19:38 GST" name="closeWindow" finished-at="2023-02-25T14:19:39 GST" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+      </class> <!-- com.Test.Alumni.TestClassAlumni -->
+      <class name="com.Test.Faculty.TestClassFac">
+        <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Faculty.TestClassFac@359f7cdf]" started-at="2023-02-25T14:21:30 GST" name="onLaunch" finished-at="2023-02-25T14:21:38 GST" duration-ms="8645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onLaunch -->
+        <test-method signature="Signupverification()[pri:1, instance:com.Test.Faculty.TestClassFac@359f7cdf]" started-at="2023-02-25T14:21:38 GST" name="Signupverification" finished-at="2023-02-25T14:22:01 GST" duration-ms="22535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Signupverification -->
+        <test-method signature="Loginverification()[pri:2, instance:com.Test.Faculty.TestClassFac@359f7cdf]" started-at="2023-02-25T14:22:01 GST" name="Loginverification" finished-at="2023-02-25T14:22:13 GST" duration-ms="12697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loginverification -->
+        <test-method signature="Logoutverification()[pri:3, instance:com.Test.Faculty.TestClassFac@359f7cdf]" started-at="2023-02-25T14:22:13 GST" name="Logoutverification" finished-at="2023-02-25T14:22:14 GST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logoutverification -->
+        <test-method is-config="true" signature="closeWindow()[pri:0, instance:com.Test.Faculty.TestClassFac@359f7cdf]" started-at="2023-02-25T14:22:14 GST" name="closeWindow" finished-at="2023-02-25T14:22:14 GST" duration-ms="819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+      </class> <!-- com.Test.Faculty.TestClassFac -->
+      <class name="com.Test.Visitor.TestClassVisitor">
+        <test-method is-config="true" signature="onLaunch()[pri:0, instance:com.Test.Visitor.TestClassVisitor@3bb9a3ff]" started-at="2023-02-25T14:17:26 GST" name="onLaunch" finished-at="2023-02-25T14:17:37 GST" duration-ms="10865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onLaunch -->
+        <test-method signature="SearchJobinVisitorPage()[pri:1, instance:com.Test.Visitor.TestClassVisitor@3bb9a3ff]" started-at="2023-02-25T14:17:37 GST" name="SearchJobinVisitorPage" finished-at="2023-02-25T14:17:57 GST" duration-ms="20277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchJobinVisitorPage -->
+        <test-method signature="JobNameSearch()[pri:2, instance:com.Test.Visitor.TestClassVisitor@3bb9a3ff]" started-at="2023-02-25T14:17:57 GST" name="JobNameSearch" finished-at="2023-02-25T14:18:12 GST" duration-ms="14296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JobNameSearch -->
+        <test-method is-config="true" signature="closeWindow()[pri:0, instance:com.Test.Visitor.TestClassVisitor@3bb9a3ff]" started-at="2023-02-25T14:18:12 GST" name="closeWindow" finished-at="2023-02-25T14:18:12 GST" duration-ms="836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+      </class> <!-- com.Test.Visitor.TestClassVisitor -->
+    </test> <!-- Functional Testing -->
+  </suite> <!-- Suite -->
+=======
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
 </testng-results>

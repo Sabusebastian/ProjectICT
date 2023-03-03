@@ -1,5 +1,6 @@
 package com.Pages.Employer;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,8 +41,11 @@ public class LoginEmp {
 	public void clickLogin() throws InterruptedException {
 		loginmenu.click();
 		Thread.sleep(3000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollBy(0,350)", "");
 		login.click();
 		Thread.sleep(3000);
+		
 	}
 	public void EnterEmail(Object email) {
 		Email.sendKeys(email.toString());

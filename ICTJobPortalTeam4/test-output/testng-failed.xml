@@ -3,7 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.Test.Employer.TestClassEmployer">
+=======
+<<<<<<< HEAD
+      <class name="com.Test.Alumni.TestClassAlumni">
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
         <methods>
           <include name="LoginVerfication"/>
           <include name="ViewResumeVerification"/>
@@ -15,7 +20,20 @@
           <include name="CreateNewPostWithSomeBlankField"/>
           <include name="onLaunch"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.Test.Employer.TestClassEmployer -->
+=======
+      </class> <!-- com.Test.Alumni.TestClassAlumni -->
+=======
+      <class name="com.Test.Employer.TestClassEmployer">
+        <methods>
+          <include name="SignupVerification"/>
+          <include name="onLaunch"/>
+          <include name="closeWindow"/>
+        </methods>
+      </class> <!-- com.Test.Employer.TestClassEmployer -->
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
+>>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
