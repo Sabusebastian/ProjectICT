@@ -25,6 +25,9 @@ public class SearchJobsAlu {
 
 	@FindBy(xpath = "//h5[@class='card-title']")
 	private List<WebElement> header;
+	 @FindBy(xpath="//h1[text()='Ohh That Job Is Not Found']")
+		
+	    private WebElement header1;
 
 	public SearchJobsAlu(WebDriver driver) {
 		this.driver = driver;
@@ -56,5 +59,14 @@ public class SearchJobsAlu {
 		int count = header.size();
 		return count;
 	}
+	 public boolean header1() throws InterruptedException	
+	 {
+		 
+		 Thread.sleep(2000);
+	   
+	   boolean isDisplayed=header1.isDisplayed();
+	   
+	   return isDisplayed;
+	 }
 	
 }
