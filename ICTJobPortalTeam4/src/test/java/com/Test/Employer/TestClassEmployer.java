@@ -27,8 +27,36 @@ public class TestClassEmployer extends BaseClass {
 	ApprovedPostEmp ObjApprovedPosts;
 	LogoutEmp ObjLogout;
 
+	@Test(priority = 1,description= "New user signup with invalid details")
+	public void SignupVerificationInvalid() throws InterruptedException, IOException {
+
+		ObjSignup = new SignupEmp(driver);
+		ObjAlert = new AlertMsg();
+		
+		Random random= new Random();
+		int rand= random.nextInt(1000);
+
+		Object name = ExcelUtility.GetCellData(2, 2,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object companyname = ExcelUtility.GetCellData(2, 4,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object email = rand+ExcelUtility.GetCellData(3, 2,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object password = ExcelUtility.GetCellData(1, 4,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object phoneNum = ExcelUtility.GetCellData(1, 11,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+		Object designation = ExcelUtility.GetCellData(2, 8,System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+
+		ObjSignup.ClickSignup();
+		ObjSignup.EnterName(name);
+		ObjSignup.EnterCompanyName(companyname);
+		ObjSignup.EnterEmail(email);
+		ObjSignup.EnterPassword(password);
+		ObjSignup.EnterPhoneNumber(phoneNum);
+		ObjSignup.EnterDesignation(designation);
+		ObjSignup.ClickSubmit();
+		String ActualAlert = ObjAlert.AcceptAlert(driver);
+		Assert.assertEquals(ActualAlert, "Name should start with alphabet ");
+	}
+
 	
-	@Test(priority = 1, description= "New user signup with valid details")
+	@Test(priority = 2, description= "New user signup with valid details")
 	public void SignupVerification() throws InterruptedException, IOException {
 
 		ObjSignup = new SignupEmp(driver);
@@ -56,8 +84,29 @@ public class TestClassEmployer extends BaseClass {
 		Assert.assertEquals(ActualAlert, "registerd successfully");
 	}
 
+	@Test(priority = 3, description = "Login with invalid username and password")
+	public void LoginVerficationInvalid() throws InterruptedException, IOException {
+
+		ObjLogin = new LoginEmp(driver);
+		ObjAlert = new AlertMsg();
+
+		ObjLogin.MovetoHome();
+		ObjLogin.clickLogin();
+
+		Object email = ExcelUtility.GetCellData(1, 4,System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 0);
+		Object password = ExcelUtility.GetCellData(1, 5,System.getProperty("user.dir") + "\\src\\\\main\\\\resources\\\\ExcelHome.xlsx", 0);
+
+		ObjLogin.EnterEmail(email);
+		ObjLogin.EnterPassword(password);
+		ObjLogin.ClickSubmit();
+		
+		String ActualAlert = ObjAlert.AcceptAlert(driver);
+
+		Assert.assertEquals(ActualAlert, "Invalid username or password");
+
+	}
 	
-	@Test(priority = 2, description = "Login with valid username and password")
+	@Test(priority = 4, description = "Login with valid username and password")
 	public void LoginVerfication() throws InterruptedException, IOException {
 
 		ObjLogin = new LoginEmp(driver);
@@ -80,7 +129,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	@Test(priority = 3, description = "Create New Job Post with All fields as Blank")
+	@Test(priority = 5, description = "Create New Job Post with All fields as Blank")
 	public void CreateNewPostWithoutData() throws InterruptedException, IOException {
 
 		ObjPostJob = new PostJobEmp(driver);
@@ -94,7 +143,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	@Test(priority = 4, description = "Create New Job Post without entering data on a required field")
+	@Test(priority = 6, description = "Create New Job Post without entering data on a required field")
 	public void CreateNewPostWithSomeBlankField() throws InterruptedException, IOException {
 
 		ObjPostJob = new PostJobEmp(driver);
@@ -142,7 +191,7 @@ public class TestClassEmployer extends BaseClass {
 	
 	
 	
-	@Test(priority = 5, description = "Create New Job Post with Valid Details")
+	@Test(priority = 7, description = "Create New Job Post with Valid Details")
 	public void CreateNewPostVerification() throws InterruptedException, IOException {
 
 		ObjPostJob = new PostJobEmp(driver);
@@ -194,7 +243,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	@Test(priority = 6, description = "Edit Job Post with new Details")
+	@Test(priority = 8, description = "Edit Job Post with new Details")
 	public void EditPostVerification() throws InterruptedException, IOException {
 
 		ObjEditJob = new EditJobEmp(driver);
@@ -250,7 +299,7 @@ public class TestClassEmployer extends BaseClass {
 	
 	
 	
-	@Test(priority=7, description = "View resume from approved posts")
+	@Test(priority=9, description = "View resume from approved posts")
 	public void ViewResumeVerification() throws InterruptedException {
 		
 	    ObjApprovedPosts = new ApprovedPostEmp(driver);
@@ -282,7 +331,7 @@ public class TestClassEmployer extends BaseClass {
 	}
 	
 	
-	@Test(priority=8, description = "Logout function verification")
+	@Test(priority=10, description = "Logout function verification")
 	public void LogOutVerification() throws InterruptedException{
 		
 		ObjLogout= new LogoutEmp(driver);
