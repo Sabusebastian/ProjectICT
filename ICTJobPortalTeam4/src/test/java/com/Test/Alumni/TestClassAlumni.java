@@ -177,11 +177,12 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Login success");
 
 	}
+	
 	@Test(priority = 5, description="Login with invalid email and password")
-
-<<<<<<< HEAD
+	
+	
+	
 	@Test(priority = 3,description="searchjobs with valid jobs")
-=======
 	public void Loginverification1() throws InterruptedException, IOException {
 
 		ObjLoginAlu = new LoginAlu(driver);
@@ -205,7 +206,6 @@ public class TestClassAlumni extends BaseClass {
 	
 
 	@Test(priority = 6)
->>>>>>> branch 'master' of https://github.com/Sabusebastian/ProjectICT.git
 	public void SearchJobVerification() throws IOException, InterruptedException {
 
 		objsearch = new SearchJobsAlu(driver);
