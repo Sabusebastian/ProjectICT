@@ -30,13 +30,13 @@ public class BaseClass {
 	driver.manage().window().maximize();
 	}
 	
-	/*
+	
 	@AfterClass
 	public void closeWindow()
 	{
 		driver.quit();
 	}
-	*/
+	
 
 }
 

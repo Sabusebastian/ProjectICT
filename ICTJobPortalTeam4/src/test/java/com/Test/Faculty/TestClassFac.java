@@ -1,3 +1,4 @@
+
 package com.Test.Faculty;
 
 import java.io.IOException;
@@ -164,23 +165,11 @@ public class TestClassFac extends BaseClass {
 		boolean Expected=true;
 		boolean actual=objLog.Invalidid();
 		Assert.assertEquals(actual, Expected); 
-		driver.close();
+		
 		
 
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
