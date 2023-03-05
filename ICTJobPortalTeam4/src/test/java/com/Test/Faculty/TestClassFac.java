@@ -17,7 +17,7 @@ public class TestClassFac extends BaseClass {
 	LoginpageFac objLog;
 	SignoutFac objSignout;
 
-	@Test(priority = 3,description="faculty signup with valid datas")
+	@Test(priority = 1,description="faculty signup with valid datas")
 	public void Signupverification() throws InterruptedException, IOException {
 
 		objSignup = new SignupFac(driver);
@@ -43,7 +43,7 @@ public class TestClassFac extends BaseClass {
 	}
 
 	@Test(priority = 2,description="faculty signup with valid datas")
-	public void Loginverification() throws IOException, InterruptedException {
+	public void Loginverification1() throws IOException, InterruptedException {
 		objLog = new LoginpageFac(driver);
 
 		Object enterEmail = ExcelUtility.GetCellData(2, 1,
@@ -64,7 +64,7 @@ public class TestClassFac extends BaseClass {
 		
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,description="Logout verification")
 	public void Logoutverification() {
 		objSignout = new SignoutFac(driver);
 		objSignout.clicksignout();
@@ -81,7 +81,7 @@ public class TestClassFac extends BaseClass {
 		
 		
 	}
-	@Test(priority=1,description="Signup verification with invalid emailid")
+	@Test(priority=4,description="Signup verification with invalid emailid")
 	public void Signupverification2() throws InterruptedException, IOException {
 		
 
@@ -104,7 +104,7 @@ public class TestClassFac extends BaseClass {
 		//objSignup.clicksubmit();
 		System.out.println("passed signup with  invalidemail");
 }
-	@Test(priority=2,description="Signupverification with nullpassword")
+	@Test(priority=5,description="Signupverification with nullpassword")
 	public void Signupverification3() throws InterruptedException, IOException {
 		
 
@@ -126,6 +126,48 @@ public class TestClassFac extends BaseClass {
 	boolean actual=objSignup.Invalidpass();
 	Assert.assertEquals(actual, Expected);
 	System.out.println("passed null password");
+	}
+
+	@Test(priority=6,description="login faulty with valid datas")
+	public void Loginverification() throws IOException, InterruptedException {
+		objLog=new LoginpageFac(driver);
+		
+		Object enterEmail=ExcelUtility.GetCellData(2, 1,System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object enterPassword=ExcelUtility.GetCellData(2, 2,System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		objLog.enterEmail(enterEmail);
+		objLog.enterPassword(enterPassword);
+		
+		
+		objLog.clicksubmit();
+		String actualUrl=driver.getCurrentUrl();
+		String expectedUrl="https://delightful-earrings-fish.cyclic.app/fachome/facview";
+		Assert.assertEquals(actualUrl,expectedUrl, "actualaUrl and expectedUrl are not same");
+		System.out.println("Test passed");
+		
+		
+		
+	}
+
+	@Test(priority=7,description="login faulty with invalid datas")
+	public void Loginverification2() throws IOException, InterruptedException {
+		objLog=new LoginpageFac(driver);
+		objLog.clicklogasfac();
+		Object enterEmail=ExcelUtility.GetCellData(1, 3,System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		Object enterPassword=ExcelUtility.GetCellData(2, 2,System.getProperty("user.dir")+"\\src\\main\\resources\\ExcelHome.xlsx", 0);
+		objLog.enterEmail(enterEmail);
+		objLog.enterPassword(enterPassword);
+		
+		
+		objLog.clicksubmit();
+		
+		
+		boolean Expected=true;
+		boolean actual=objLog.Invalidid();
+		Assert.assertEquals(actual, Expected); 
+		driver.close();
+		
+
+
 	}
 
 

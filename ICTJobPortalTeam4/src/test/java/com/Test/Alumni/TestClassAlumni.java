@@ -24,7 +24,7 @@ public class TestClassAlumni extends BaseClass {
 	ApplyJobAlu ObjApplyJobAlu;
 	LoginAlu ObjLoginAlu;
 
-	@Test(priority = 1, description="New User signup with valid details")
+	@Test(priority = 1, description = "New User signup with valid details")
 	public void Signupverification() throws InterruptedException, IOException {
 
 		ObjSignupAlu = new SignupAlu(driver);
@@ -67,7 +67,8 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Data saved successfully");
 
 	}
-	@Test(priority = 2, description="New User signup with Invalid emailid")
+
+	@Test(priority = 2, description = "New User signup with Invalid emailid")
 	public void Signupverification1() throws InterruptedException, IOException {
 
 		ObjSignupAlu = new SignupAlu(driver);
@@ -103,14 +104,14 @@ public class TestClassAlumni extends BaseClass {
 		ObjSignupAlu.EnterBatch(batch);
 		ObjSignupAlu.EnterPlacementStatus(placement);
 		ObjSignupAlu.EnterPassWord(password);
-		boolean Expected=true;
-		boolean actual=ObjSignupAlu.Errormsg();
+		boolean Expected = true;
+		boolean actual = ObjSignupAlu.Errormsg();
 		Assert.assertEquals(actual, Expected);
-		//ObjSignupAlu.clicksubmit();
+		// ObjSignupAlu.clicksubmit();
 		System.out.println("passed signup with  invalidemail");
-}
-	
-	@Test(priority = 3, description="New User signup with Invalid mobilenumber")
+	}
+
+	@Test(priority = 3, description = "New User signup with Invalid mobilenumber")
 	public void Signupverification2() throws InterruptedException, IOException {
 
 		ObjSignupAlu = new SignupAlu(driver);
@@ -146,15 +147,14 @@ public class TestClassAlumni extends BaseClass {
 		ObjSignupAlu.EnterBatch(batch);
 		ObjSignupAlu.EnterPlacementStatus(placement);
 		ObjSignupAlu.EnterPassWord(password);
-		boolean Expected=true;
-		boolean actual=ObjSignupAlu.Errormsg();
+		boolean Expected = true;
+		boolean actual = ObjSignupAlu.Errormsg();
 		Assert.assertEquals(actual, Expected);
-		//ObjSignupAlu.clicksubmit();
+		// ObjSignupAlu.clicksubmit();
 		System.out.println("passed signup with  invalidnumber");
-}
-	
+	}
 
-	@Test(priority = 4, description="Login with valid email and password")
+	@Test(priority = 4, description = "Login with valid email and password")
 
 	public void Loginverification() throws InterruptedException, IOException {
 
@@ -176,7 +176,8 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(ActualAlert, "Login success");
 
 	}
-	@Test(priority = 5, description="Login with invalid email and password")
+
+	@Test(priority = 5, description = "Login with invalid email and password")
 
 	public void Loginverification1() throws InterruptedException, IOException {
 
@@ -192,14 +193,13 @@ public class TestClassAlumni extends BaseClass {
 
 		ObjLoginAlu.EnterEmail(emailaddress);
 		ObjLoginAlu.EnterPassword(password);
-		boolean Expected=true;
-		boolean actual=ObjSignupAlu.Errormsg();
+		boolean Expected = true;
+		boolean actual = ObjSignupAlu.Errormsg();
 		Assert.assertEquals(actual, Expected);
 		System.out.println("passed signup with  invalidemailid");
-}
-	
+	}
 
-	@Test(priority = 6)
+	@Test(priority = 6, description = "search with valid job")
 	public void SearchJobVerification() throws IOException, InterruptedException {
 
 		objsearch = new SearchJobsAlu(driver);
@@ -219,7 +219,23 @@ public class TestClassAlumni extends BaseClass {
 		// objsearch.Clickback();
 	}
 
-	@Test(priority = 7, description= "Apply job with valid details")
+	@Test(priority = 7, description = "search job with invalid job")
+	public void SearchInvalidJob() throws IOException, InterruptedException {
+
+		objsearch = new SearchJobsAlu(driver);
+
+		Object search = ExcelUtility.GetCellData(0, 1,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\ExcelHome.xlsx", 1);
+
+		objsearch.SearchJob(search);
+
+		objsearch.Clicksearch();
+		boolean Actual = objsearch.header1();
+		boolean expected = true;
+		Assert.assertEquals(Actual, expected, "Ohh That job is not found");
+	}
+
+	@Test(priority = 8, description = "Apply job with valid details")
 	public void ApplyJobVerification() throws InterruptedException, IOException {
 
 		ObjApplyJobAlu = new ApplyJobAlu(driver);
@@ -261,7 +277,8 @@ public class TestClassAlumni extends BaseClass {
 		Assert.assertEquals(Alertmsg, "Upload Success");
 
 	}
-	@Test(priority = 8, description= "Apply job with invalid details")
+
+	@Test(priority = 9, description = "Apply job with invalid details")
 	public void ApplyJobVerification1() throws InterruptedException, IOException {
 
 		ObjApplyJobAlu = new ApplyJobAlu(driver);
@@ -299,21 +316,21 @@ public class TestClassAlumni extends BaseClass {
 		ObjApplyJobAlu.ShareYourResume(resume);
 		ObjApplyJobAlu.Disabledbutton();
 
-		boolean Expected=true;
-		boolean actual=ObjApplyJobAlu.Invalid();
+		boolean Expected = true;
+		boolean actual = ObjApplyJobAlu.Invalid();
 		Assert.assertEquals(actual, Expected);
 		System.out.println("passed invalid branch");
 
 	}
-	
-	@Test(priority = 9, description= "logout function verification")
+
+	@Test(priority = 10, description = "logout function verification")
 	public void LogoutVerification() throws InterruptedException {
 		objlogout = new LogoutAlu(driver);
 		Object currenturl = driver.getCurrentUrl();
 		objlogout.Clicklogout();
 		Object newurl = driver.getCurrentUrl();
 		Assert.assertNotEquals(newurl, currenturl, "The two urls are same-Test failed");
-		
+
 	}
-		
+
 }
